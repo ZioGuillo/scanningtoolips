@@ -1,0 +1,121 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+__pycache__/
+*.pyc
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+myenv/
+docker_test/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE settings
+.idea/
+.vscode/
+*.code-workspace
+
+# PyCharm files
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/copyright/
+
+# spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# Sublime Text
+.svn
+.svn/*
+*.sublime-project
+*.sublime-workspace
+
+# Rocket-IDE
+.rocketide
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
+
+# TernJS
+.tern-port
+
+# Visual Studio Code
+.vscode/
+.history
+*.swp
+*~
+
+# Windows directories
+ehthumbs.db
+Desktop.ini
+Thumbs.db
+
+# macOS directories and files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

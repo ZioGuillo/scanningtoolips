@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Header Viewer</title>
+</head>
+<body>
+    <h1>Server Scanner IP</h1>
+    <label for="urlInput">Enter URL: </label>
+    <input type="text" id="urlInput" placeholder="https://example.com or IP address">
+    <button id="fetchHeadersButton">Fetch Headers</button>
+    <pre id="headersDisplay"></pre>
+    
+    <h2>Root Directory Status:</h2>
+    <p id="rootDirectoryStatus"></p>
+
+    <script>
+        document.getElementById("fetchHeadersButton").addEventListener("click", function() {
+            const url = document.getElementById("urlInput").value;
+
+            fetch('/get-headers?url=' + encodeURIComponent(url))
+            .then(response => response.json())
+            .then(data => {
+                // Check if the "Server" header is present in the response
+                if (data.hasOwnProperty('Server')) {
+                    // Display only the "Server" header value
+                    document.getElementById("headersDisplay").textContent = data.Server;
+                } else {
+                    document.getElementById("headersDisplay").textContent = "Server header not found in response.";
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching headers: " + error);
+            });
+
+            // Check the root directory status
+            fetch('/check-root-directory?url=' + encodeURIComponent(url))
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("rootDirectoryStatus").textContent = data;
+            })
+            .catch(error => {
+                console.error("Error checking root directory: " + error);
+            });
+        });
+    </script>
+</body>
+</html>
