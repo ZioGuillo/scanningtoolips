@@ -17,11 +17,11 @@ Clone or download the repository to your local machine.
 
 Create a virtual environment (optional but recommended).
 
-```python -m venv venv```
+```python -m venv .venv```
 
 Activate the virtual environment (Linux/Mac):
 
-```source venv/bin/activate```
+```source .venv/bin/activate```
 
 Activate the virtual environment (Windows):
 
